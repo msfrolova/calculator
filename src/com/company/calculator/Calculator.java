@@ -1,21 +1,21 @@
 package com.company.calculator;
 
-public class Calculation {
+public class Calculator {
 
-    public double calculate(String input) throws InputException {
-        String[] parsedValue = new Parser().stringToArray(input, " ");
+    public static double calculate(String input) throws InputException {
+        String[] parsedValues = new Parser().stringToArray(input, " ");
 
-        if (parsedValue.length < 3) {
+        if (parsedValues.length < 3) {
             throw new InputException("Wrong input: not enough values");
         }
 
-        if (parsedValue.length > 3) {
+        if (parsedValues.length > 3) {
             throw new InputException("Wrong input: too much values");
         }
 
-        char operationChar = parsedValue[1].charAt(0);
-        double firstNumber = Double.parseDouble(parsedValue[0]);
-        double secondNumber = Double.parseDouble(parsedValue[2]);
+        char operationChar = parsedValues[1].charAt(0);
+        double firstNumber = Double.parseDouble(parsedValues[0]);
+        double secondNumber = Double.parseDouble(parsedValues[2]);
 
         switch (operationChar) {
             case '+':

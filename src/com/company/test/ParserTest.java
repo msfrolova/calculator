@@ -15,10 +15,10 @@ public class ParserTest {
     @Test
     public void pass_whenAddsValueIntoArray() {
 
-        Parser parseTheArray = new Parser();
+        Parser parser = new Parser();
 
         String[] expectedArray = {"1", "+", "1"};
-        String[] resultArray = parseTheArray.stringToArray("1 + 1", " ");
+        String[] resultArray = parser.stringToArray("1 + 1", " ");
 
         assertArrayEquals(expectedArray, resultArray);
     }

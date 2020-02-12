@@ -12,7 +12,7 @@ public class Main {
                     break;
                 }
 
-                double result = new Calculation().calculate(userInput);
+                double result = Calculator.calculate(userInput);
                 System.out.println("Result: " + result);
             } catch (InputException e) {
                 System.out.println(e.getMessage());
